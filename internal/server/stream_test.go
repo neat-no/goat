@@ -15,11 +15,11 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/stats"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
-	grpcStatsMocks "github.com/avos-io/goat/gen/grpc/stats/mocks"
-	"github.com/avos-io/goat/gen/mocks"
-	"github.com/avos-io/goat/gen/testproto"
-	"github.com/avos-io/goat/internal"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
+	grpcStatsMocks "github.com/neat-no/goat/gen/grpc/stats/mocks"
+	"github.com/neat-no/goat/gen/mocks"
+	"github.com/neat-no/goat/gen/testproto"
+	"github.com/neat-no/goat/internal"
 )
 
 var errTest = errors.New("TEST ERROR (EXPECTED)")

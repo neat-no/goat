@@ -7,7 +7,7 @@ import (
 	"net"
 	"sync"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
 	"google.golang.org/protobuf/proto"
 )
 

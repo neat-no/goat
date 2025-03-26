@@ -3,7 +3,7 @@ package types
 import (
 	"context"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
 )
 
 // RpcReadWriter is the generic interface used by Goat's client and servers.

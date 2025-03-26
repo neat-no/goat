@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
 )
 
 type TestConn struct {

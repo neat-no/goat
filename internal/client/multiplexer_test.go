@@ -14,10 +14,10 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/gen/mocks"
-	"github.com/avos-io/goat/gen/testproto"
-	"github.com/avos-io/goat/internal/client"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/gen/mocks"
+	"github.com/neat-no/goat/gen/testproto"
+	"github.com/neat-no/goat/internal/client"
 )
 
 var errTest = errors.New("TEST ERROR (EXPECTED)")

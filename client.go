@@ -7,9 +7,9 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/internal"
-	"github.com/avos-io/goat/internal/client"
+	"github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/internal"
+	"github.com/neat-no/goat/internal/client"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/encoding"
 	"google.golang.org/grpc/encoding/proto"

@@ -15,10 +15,10 @@ import (
 	"google.golang.org/grpc/encoding/proto"
 	"google.golang.org/grpc/metadata"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/gen/mocks"
-	"github.com/avos-io/goat/gen/testproto"
-	"github.com/avos-io/goat/internal"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/gen/mocks"
+	"github.com/neat-no/goat/gen/testproto"
+	"github.com/neat-no/goat/internal"
 )
 
 var errTest = errors.New("EXPECTED TEST ERROR")

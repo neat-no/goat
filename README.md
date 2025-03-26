@@ -12,7 +12,7 @@ Golang is our canonical language for GOAT and is implemented in this repo. See b
 
 ## Typescript / ECMAScript
 
-See the [goat-es](https://github.com/avos-io/goat-es) repository.
+See the [goat-es](https://github.com/neat-no/goat-es) repository.
 
 ## Kotlin
 

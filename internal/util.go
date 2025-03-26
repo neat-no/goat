@@ -11,8 +11,8 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/stats"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/types"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/types"
 )
 
 func ToKeyValue(mds ...metadata.MD) []*goatorepo.KeyValue {

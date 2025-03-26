@@ -8,7 +8,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/avos-io/goat/gen/goatorepo"
+	"github.com/neat-no/goat/gen/goatorepo"
 )
 
 const (

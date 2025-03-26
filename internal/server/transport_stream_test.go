@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 
-	grpcMocks "github.com/avos-io/goat/gen/grpc/mocks"
-	"github.com/avos-io/goat/gen/testproto"
+	grpcMocks "github.com/neat-no/goat/gen/grpc/mocks"
+	"github.com/neat-no/goat/gen/testproto"
 )
 
 func TestUnaryTransportStream(t *testing.T) {
