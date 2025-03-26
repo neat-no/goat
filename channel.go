@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/avos-io/goat/internal"
+	"github.com/neat-no/goat/internal"
 )
 
 // NewGoatOverChannel turns an input and an output channel into an RpcReadWriter.

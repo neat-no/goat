@@ -5,7 +5,7 @@ package mocks
 import (
 	context "context"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
 	mock "github.com/stretchr/testify/mock"
 )
 

@@ -6,8 +6,8 @@
 package goat
 
 import (
-	proto "github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/types"
+	proto "github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/types"
 )
 
 // Rpc is the fundamental type in Goat: the generic protobuf structure into

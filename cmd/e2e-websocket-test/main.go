@@ -11,8 +11,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/avos-io/goat"
-	"github.com/avos-io/goat/gen/testproto"
+	"github.com/neat-no/goat"
+	"github.com/neat-no/goat/gen/testproto"
 	"github.com/coder/websocket"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"

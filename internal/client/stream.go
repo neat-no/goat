@@ -18,9 +18,9 @@ import (
 	"google.golang.org/grpc/stats"
 	"google.golang.org/grpc/status"
 
-	goatorepo "github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/internal"
-	"github.com/avos-io/goat/types"
+	goatorepo "github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/internal"
+	"github.com/neat-no/goat/types"
 )
 
 type clientStream struct {

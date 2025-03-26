@@ -3,24 +3,23 @@ with-expecter: True
 
 
 packages:
-  github.com/avos-io/goat/types: 
+  github.com/neat-no/goat/types:
     config:
       dir: "gen/mocks"
       outpkg: "mocks"
       all: true
-  google.golang.org/grpc: 
+  google.golang.org/grpc:
     config:
       dir: "gen/grpc/mocks"
       outpkg: "mocks"
       include-regex: ".*Interceptor|.*BidiStreamingServer"
-  google.golang.org/grpc/stats: 
+  google.golang.org/grpc/stats:
     config:
       dir: "gen/grpc/stats/mocks"
       outpkg: "mocks"
       include-regex: ".*Handler"
-  github.com/avos-io/goat/gen/testproto:
+  github.com/neat-no/goat/gen/testproto:
     config:
       dir: "gen/testproto/mocks"
       outpkg: "mocks"
       all: true
-  

@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/avos-io/goat"
-	"github.com/avos-io/goat/gen/goatorepo"
+	"github.com/neat-no/goat"
+	"github.com/neat-no/goat/gen/goatorepo"
 )
 
 func TestDemuxSource(t *testing.T) {

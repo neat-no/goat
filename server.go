@@ -20,9 +20,9 @@ import (
 	"google.golang.org/grpc/stats"
 	"google.golang.org/grpc/status"
 
-	"github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/internal"
-	"github.com/avos-io/goat/internal/server"
+	"github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/internal"
+	"github.com/neat-no/goat/internal/server"
 )
 
 // ServerOption is an option used when constructing a NewServer.

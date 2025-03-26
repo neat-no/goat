@@ -1,4 +1,4 @@
-module github.com/avos-io/goat
+module github.com/neat-no/goat
 
 go 1.21
 

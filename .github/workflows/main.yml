@@ -46,7 +46,7 @@ jobs:
       - name: Checkout goat-es
         uses: actions/checkout@v4
         with:
-          repository: avos-io/goat-es
+          repository: neat-no/goat-es
           path: goat-es
 
       - name: Use Node.js ${{ env.NODE_VERSION }}

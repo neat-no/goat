@@ -15,12 +15,12 @@ import (
 	"google.golang.org/grpc/stats"
 	"google.golang.org/protobuf/proto"
 
-	grpcStatsMocks "github.com/avos-io/goat/gen/grpc/stats/mocks"
+	grpcStatsMocks "github.com/neat-no/goat/gen/grpc/stats/mocks"
 
-	"github.com/avos-io/goat/gen/goatorepo"
-	"github.com/avos-io/goat/gen/testproto"
-	"github.com/avos-io/goat/gen/testproto/mocks"
-	"github.com/avos-io/goat/internal/testutil"
+	"github.com/neat-no/goat/gen/goatorepo"
+	"github.com/neat-no/goat/gen/testproto"
+	"github.com/neat-no/goat/gen/testproto/mocks"
+	"github.com/neat-no/goat/internal/testutil"
 )
 
 var errTest = errors.New("TEST ERROR (EXPECTED)")
