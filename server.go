@@ -307,7 +307,7 @@ func (h *handler) processUnaryRpc(
 
 	var appErr error
 	if headerErr != nil {
-		log.Info().Err(headerErr).Msgf("invalid headers: calling RST stream %d", rpc.Id)
+		log.Info().Err(headerErr).Msgf("invalid headers: returning internal error %d", rpc.Id)
 		appErr = status.Error(codes.Internal, "invalid headers")
 	}
 	fullMethod := fmt.Sprintf("/%s/%s", info.name, md.MethodName)
