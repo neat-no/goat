@@ -302,13 +302,14 @@ func (h *handler) processUnaryRpc(
 	md *grpc.MethodDesc,
 	rpc *goatorepo.Rpc,
 ) *goatorepo.Rpc {
-	ctx, cancel, err := contextFromHeaders(clientCtx, rpc.GetHeader())
-	if err != nil {
-		log.Panic().Err(err).Msg("Server: failed to get context from headers")
-	}
+	ctx, cancel, headerErr := contextFromHeaders(clientCtx, rpc.GetHeader())
 	defer cancel()
 
 	var appErr error
+	if headerErr != nil {
+		log.Info().Err(headerErr).Msgf("invalid headers: calling RST stream %d", rpc.Id)
+		appErr = status.Error(codes.Internal, "invalid headers")
+	}
 	fullMethod := fmt.Sprintf("/%s/%s", info.name, md.MethodName)
 
 	beginTime := time.Now()
@@ -344,7 +345,9 @@ func (h *handler) processUnaryRpc(
 	}
 
 	var resp any
-	resp, appErr = md.Handler(info.serviceImpl, ctx, dec, h.srv.unaryInterceptor)
+	if appErr == nil {
+		resp, appErr = md.Handler(info.serviceImpl, ctx, dec, h.srv.unaryInterceptor)
+	}
 
 	respH := internal.ToKeyValue(sts.GetHeaders())
 	respHeader := &goatorepo.RequestHeader{
@@ -376,6 +379,7 @@ func (h *handler) processUnaryRpc(
 
 	var respBody *goatorepo.Body
 	var data mem.BufferSlice
+	var err error
 
 	if resp != nil {
 		data, err = h.codec.Marshal(resp)

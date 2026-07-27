@@ -124,6 +124,42 @@ func TestUnary(t *testing.T) {
 			t.Fatal("timeout on writeChan")
 		}
 	})
+
+	t.Run("Invalid binary metadata returns internal error", func(t *testing.T) {
+		is := require.New(t)
+
+		srv := NewServer("s0")
+		defer srv.Stop()
+
+		id := uint64(2)
+		method := "/" + testproto.TestService_ServiceDesc.ServiceName + "/Unary"
+		sent := testproto.Msg{Value: 42}
+
+		service := mocks.NewMockTestServiceServer(t)
+		testproto.RegisterTestServiceServer(srv, service)
+
+		conn := testutil.NewTestConn()
+
+		go func() {
+			srv.Serve(context.Background(), conn)
+		}()
+
+		rpc := wrapRpc(id, method, &sent, "c0", "s0")
+		rpc.Header.Headers = []*goatorepo.KeyValue{
+			{Key: "invalid-bin", Value: "not valid base64"},
+		}
+		conn.ReadChan <- testutil.ReadReturn{Rpc: rpc}
+
+		select {
+		case w := <-conn.WriteChan:
+			is.Equal(int32(codes.Internal), w.GetStatus().GetCode())
+			is.NotEmpty(w.GetStatus().GetMessage())
+			is.Equal(id, w.GetId())
+			is.Equal(method, w.GetHeader().GetMethod())
+		case <-time.After(1 * time.Second):
+			t.Fatal("timeout on writeChan")
+		}
+	})
 }
 
 func TestServerStream(t *testing.T) {
